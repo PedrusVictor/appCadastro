@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block body %}
+<div class="row-9">
+    <div class="col" id="pers">
+        <div class="slots">
+
+            <h1 style="text-align: center;">Sugestão de Time</h1>
+        </div>
+        <div class="slots" style="display: flex; justify-content: center;">
+        {% for pers in time[0]%}
+          <div class="card cslot" >
+            
+            <label>{{pers}}</label>
+          </div>
+        {% endfor %}
+        </div>
+    </div>
+    <div class="col" id="inim">
+        <div class="slots">
+        <h1 style="text-align: center;">Sugestão de Personagens a remover</h1>
+    </div>
+    <div class="slots" style="display: flex; justify-content: center;">
+        {% for pers in time[1]%}
+        <div class="card cslot" >
+          
+          <label>{{pers}}</label>
+        </div>
+      {% endfor %}
+        </div>
+    </div>
+
+{% endblock %}

@@ -1,0 +1,139 @@
+{% extends "base.html" %}
+{% block body %}
+
+  <form action="/time" method="POST" style="width: auto;height: auto;" target="_blank">
+    <div class="row-9">
+      
+    
+      <div class="col" id="inim">
+        <div class="slots">
+         
+          {% for p in range(8) %}
+          <input type="text" id="p1{{p}}" name="p1{{p}}" hidden value=0>
+          <div class="card cslot" onclick=mudarslot(1,this) value={{p}} id="op1{{p}}">
+            <img>
+            <label>Pers</label>
+          </div>
+          {% endfor %}
+  
+          <input type="text" id="p1{{8}}" name="p1{{8}}" hidden value=0>
+          <div class="card pet" onclick=mudarslot(1,this) value=8 id="op18">
+            <img>
+            <label>Pet</label>
+          </div>
+  
+          <input type="text" id="p1{{9}}" name="p1{{9}}" hidden value=0>
+          <div class="card pet" onclick=mudarslot(1,this) value=9 id="op19">
+            <img>
+            <label>Pet</label>
+          </div>
+          <input type="text" name="p110" id="p110" hidden value="0">
+          <div class="card ban" onclick="ban()" id="ban">
+            <img src="/static/icons/ban.png">
+            
+          </div>
+          <div class="card ban" onclick="desban()" hidden id="dban">
+            <img src="/static/icons/desbanir.png">
+            
+          </div>
+          
+        </div>
+        <div>
+          <a  href="#" onclick="filtrar(1,'Sr')"> Sr</a>
+          <a href="#" onclick="filtrar(1,'S')"> S</a>
+          <a  href="#" onclick="filtrar(1,'A')"> A</a>
+        </div>
+        <div class="slots" id="slots1pers">
+          <div class="Sr">
+            {% for a in lista[2] %}
+            <div onclick="atribuirvalor(1,this);"  class="card iconPers"  value={{a}} id="persIc1{{a}}">
+              <img src="/static/pers/PersSr/{{a}}.png" />
+              <label>{{a}}</label>
+            </div>
+          {% endfor %}
+          </div>
+          <div class="S" hidden>
+            {% for a in lista[1] %}
+            <div onclick="atribuirvalor(1,this);"  class="card iconPers"  value={{a}} id="persIc1{{a}}">
+              <img src="/static/pers/PersS/{{a}}.png" />
+              <label>{{a}}</label>
+            </div>
+          {% endfor %}
+          </div>
+          <div class="A" hidden>
+            {% for a in lista[0] %}
+            <div onclick="atribuirvalor(1,this);"  class="card iconPers"  value={{a}} id="persIc1{{a}}">
+              <img src="/static/pers/PersA/{{a}}.png" />
+              <label>{{a}}</label>
+            </div>
+          {% endfor %}
+          </div>
+        </div>
+        
+        <div class="slots" id="slots1pet" hidden>
+          <div class="S">
+            {% for a in lista2[0] %}
+            <div onclick="atribuirvalor(1,this);"  class="card iconPers"  value={{a}} id="persIc1{{a}}">
+              <img src="/static/pet/pets/{{a}}.png" />
+              <label>{{a}}</label>
+            </div>
+          {% endfor %}
+          </div>
+          
+          <div class="A" hidden>
+            {% for a in lista2[1] %}
+            <div onclick="atribuirvalor(1,this);"  class="card iconPers"  value={{a}} id="persIc1{{a}}">
+              <img src="/static/pet/petsA/{{a}}.png" />
+              <label>{{a}}</label>
+            </div>
+          {% endfor %}
+        </div>
+        </div>
+      </div>
+      <div class="col" id="pers">
+        
+        <div class="slots">
+         
+          {% for p in range(4) %}
+          <input type="text" id="p0{{p}}" name="p0{{p}}" hidden value=0>
+          <div class="card cslot" onclick=mudarslot(0,this) value={{p}} id="op0{{p}}">
+            <img>
+            <label>Pers</label>
+          </div>
+          {% endfor %}
+  
+          <input type="text" id="p0{{4}}" name="p0{{4}}" hidden value=0>
+          <div class="card pet" onclick=mudarslot(0,this) value=4 id="op04">
+            <img>
+            <label>Pet</label>
+          </div>
+  
+        </div>
+       
+        
+        
+        
+       
+        
+      </div>
+
+    </div>
+    
+    <div class="row-1">
+     
+     {{time }}
+      <input type="submit" value="enviar" class="btn">
+      <a href="#/salve" >salvar</a>
+  </div>
+    
+  </form>
+
+
+
+      
+      
+    
+      
+   
+
+{% endblock %}

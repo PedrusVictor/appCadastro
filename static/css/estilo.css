@@ -1,0 +1,131 @@
+a{
+    text-decoration: none;
+    color: #ffa875bf;
+    font-weight: bold;
+    margin-left: 5%;
+}a.navbar{
+    
+    color: #f7f7f7;
+    
+}
+a:hover{
+    
+    color: rgb(84, 99, 226);
+}
+li{
+    display: inline;
+}
+.topo, footer{
+    height: 10%;
+    background-color: black;
+    
+}
+.card{
+    height: 18%;
+    width: 6%;
+    /*background-image:Url("https://pbs.twimg.com/media/Cd837YoW4AE4cbb.jpg");*/
+    background-color: blanchedalmond;
+    text-align: center;
+    float: left;
+    font-size:10px;
+    font-family: fantasy;
+    color: #452553;
+    margin: 1%;
+}
+.card[selected]{
+    background-color: #21ab7254;
+
+}
+.card.pet{
+    margin-right: 10%;
+    float: right;
+}
+.iconPers{
+    border-radius: 20px;
+    margin: 0.5%;
+    
+}
+.card:hover{
+    background-color: rgb(84, 99, 226);
+    color: whitesmoke;
+}
+.conteudo{
+    height: 80%;
+    width: 100%;
+    /*display: inline-flex;*/
+}
+.col{
+    border: 1px solid black;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    height: 100%;
+}
+
+
+div[disabled]
+{
+  pointer-events: none;
+
+  /* for "disabled" effect */
+  opacity: 0.5;
+  background: #CCC;
+}
+option{
+    float: left;
+}
+
+.slots{height: 50%;}
+
+.card.iconPers img, .card img{
+    width: 70%;
+    height: 70%;
+    
+    
+    display: block;
+    margin: auto;
+    
+}
+.row-9{
+    height: 90%;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.row-1{
+    height: 10%;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.btn{
+    border-radius: 10px;
+    background-color: #ffa875bf;
+    color: black;
+    font-weight: bold;
+    border-radius: 10px;
+    box-shadow: 0px 1px 1px 1px;
+    
+}
+.btn:hover{
+    background-color: rgb(46, 0, 0);
+    cursor: pointer;
+    color: blanchedalmond;
+}
+.ban{
+    position: relative;
+    left: 90%;
+}
+div[ban]{
+    background-image: Url("/static/icons/ban.png");
+    background-size: 80% 80%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: yellow;
+}
+.row-1 label{
+    font-weight: bold;
+    color: #452553;
+}
