@@ -1,0 +1,16 @@
+Flask
+Flask-Login
+Flask-SQLAlchemy
+pandas
+backports.os
+scikit-image
+scikit-learn
+SQLAlchemy
+passlib
+Werkzeug
+gunicorn
+gevent
+click
+itsdangerous
+Jinja2
+MarkupSafe
